@@ -51,8 +51,8 @@ const Search: NextPage<Props> = ({ videos }) => {
         <div className="md:mt-16">
           {searchAccounts.length > 0 ? (
             searchAccounts.map((user: IUser, i: number) => (
-              <div>
-                <Link key={user._id} href={`/profile/${user?._id}`}>
+              <div key={i}>
+                <Link href={`/profile/${user?._id}`}>
                   <div className="flex gap-3 p-2 cursor-pointer font-semibold border-b-2 border-gray-200 my-5">
                     <div className="w-16 h-16">
                       <Image
